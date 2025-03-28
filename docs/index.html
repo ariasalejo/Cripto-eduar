@@ -3,31 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criptoeduar - Educación en Criptomonedas</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Cripto Eduar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Criptoeduar</h1>
-        <p>Tu guía educativa para entender el mundo de las criptomonedas.</p>
+        <h1>Cripto Eduar</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li>
+                    <a href="#menu">Menú Principal</a>
+                    <ul class="dropdown">
+                        <li><a href="#que-son">¿Qué son las criptomonedas?</a></li>
+                        <li><a href="#aprende">¿Quieres aprender sobre...?</a>
+                            <ul class="dropdown">
+                                <li><a href="#defi">DeFi</a></li>
+                                <li><a href="#depin">DePin</a></li>
+                                <li><a href="#memecoin">Memecoin</a></li>
+                                <li><a href="#nfts">NFTs</a></li>
+                                <li><a href="#layer2">Layer 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#principales">Principales Criptomonedas</a></li>
+                        <li><a href="#videos">Videos Educativos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#que-es">¿Qué son las criptomonedas?</a></li>
-            <li><a href="#blockchain">Blockchain</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <section id="inicio">
-        <h2>Bienvenido</h2>
-        <p>En Criptoeduar, aprenderás todo sobre criptomonedas y blockchain.</p>
-    </section>
-
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <div id="readme-content"></div>
+        </section>
+        <section id="que-son">
+            <h2>¿Qué son las criptomonedas?</h2>
+            <p>Las criptomonedas son monedas digitales o virtuales que utilizan tecnología criptográfica para garantizar la seguridad de las transacciones.</p>
+            <ul>
+                <li><strong>Descentralización:</strong> No dependen de bancos centrales.</li>
+                <li><strong>Seguridad:</strong> Utilizan tecnología blockchain.</li>
+                <li><strong>Transparencia:</strong> Todas las transacciones son públicas.</li>
+                <li><strong>Accesibilidad:</strong> Se pueden enviar y recibir globalmente.</li>
+            </ul>
+        </section>
+        <section id="aprende">
+            <h2>¿Quieres aprender sobre...?</h2>
+            <div id="tables-container"></div>
+        </section>
+        <section id="principales">
+            <h2>Principales Criptomonedas</h2>
+            <div id="crypto-prices"></div>
+        </section>
+        <section id="videos">
+            <h2>Videos Educativos</h2>
+            <div class="video-grid">
+                <!-- Videos embebidos -->
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 Criptoeduar. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Cripto Eduar</p>
     </footer>
 </body>
 </html>
