@@ -3,66 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cripto-Eduar | Educación Crypto</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- Chart.js para gráficos -->
+    <title>Cripto-Eduar | Educación Blockchain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- Cabecera con README -->
+    <!-- Header Hero -->
     <header class="hero">
-        <div class="readme-content">
-            <!-- Pega aquí el contenido de tu README.md -->
-            <h1>Bienvenido a Cripto-Eduar</h1>
-            <p>Tu guía definitiva para entender criptomonedas...</p>
+        <div class="container text-center">
+            <h1 class="display-4">Bienvenido a <span class="text-gradient">Cripto-Eduar</span></h1>
+            <p class="lead">Tu guía interactiva para dominar el mundo de las criptomonedas</p>
+            <div class="cta-buttons mt-4">
+                <button class="btn btn-primary btn-lg me-2">Empezar Tutorial</button>
+                <button class="btn btn-outline-light btn-lg">Explorar Criptos</button>
+            </div>
         </div>
     </header>
-       <!-- Sección de Noticias -->
-     <section class="news-section">
-    <h2>📰 Últimas Noticias Crypto</h2>
-    <div id="news-container" class="news-grid"></div>
-</section>
-    <!-- Menú Desplegable Principal -->
-    <main class="container">
-        <!-- Sección: ¿Qué son las criptomonedas? -->
-        <details class="dropdown" open>
-            <summary>📚 ¿Qué son las criptomonedas?</summary>
-            <p>Texto explicativo completo aquí...</p>
-        </details>
 
-        <!-- Sección: Quieres aprender de... -->
-        <details class="dropdown">
-            <summary>🚀 ¿Quieres aprender de...?</summary>
-            <details class="sub-dropdown">
-                <summary>DeFi</summary>
-                <div id="defi-table" class="coin-table"></div>
-            </details>
-            <!-- Repetir para Memecoin, DePin, NFTs, Layer 2 -->
-        </details>
-
-        <!-- Sección: Principales Criptomonedas -->
-        <details class="dropdown">
-            <summary>💎 Principales Criptomonedas</summary>
-            <details class="sub-dropdown">
-                <summary>Bitcoin (BTC)</summary>
-                <div class="coin-info">
-                    <p>Información detallada...</p>
-                    <canvas id="btc-chart"></canvas>
+    <!-- Sección de Noticias API -->
+    <section class="news-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="fas fa-newspaper me-2"></i>Últimas Noticias Crypto</h2>
+            <div class="row" id="news-container">
+                <!-- Noticias cargadas por API -->
+                <div class="col-md-4 mb-4">
+                    <div class="news-card loading">
+                        <div class="placeholder-content"></div>
+                    </div>
                 </div>
-            </details>
-            <!-- Repetir para Ethereum, BNB, Tether, Solana -->
-        </details>
+                <div class="col-md-4 mb-4">
+                    <div class="news-card loading">
+                        <div class="placeholder-content"></div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="news-card loading">
+                        <div class="placeholder-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Sección de Videos -->
-        <section class="videos-section">
-            <h2>🎥 Videos Educativos</h2>
-            <div class="video-grid" id="video-container"></div>
+    <!-- Sección Educativa -->
+    <main class="container my-5">
+        <!-- Qué son las criptomonedas -->
+        <section class="crypto-basics mb-5">
+            <div class="card shadow-lg">
+                <div class="card-header bg-dark text-light">
+                    <h3><i class="fas fa-coins me-2"></i>¿Qué son las criptomonedas?</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="lead">Las criptomonedas son dinero digital que utiliza criptografía para garantizar transacciones seguras.</p>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Descentralizadas (sin bancos)</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Basadas en tecnología blockchain</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Transacciones globales instantáneas</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Suministro limitado (ej: solo 21M de BTC)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="interactive-demo p-3 text-center">
+                                <img src="https://via.placeholder.com/400x200?text=Blockchain+Demo" alt="Demo Blockchain" class="img-fluid rounded">
+                                <button class="btn btn-sm btn-outline-primary mt-2">Ver Animación</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías de Criptos -->
+        <section class="crypto-categories mb-5">
+            <h2 class="text-center mb-4"><i class="fas fa-layer-group me-2"></i>Explora por Categorías</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="category-card card h-100">
+                        <div class="card-body">
+                            <h4><i class="fas fa-money-bill-wave me-2"></i>DeFi</h4>
+                            <p>Finanzas descentralizadas sin intermediarios</p>
+                            <div class="crypto-table-placeholder"></div>
+                            <button class="btn btn-sm btn-outline-primary">Ver Proyectos</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repetir para otras categorías (NFTs, Meme, Layer 2, etc) -->
+            </div>
+        </section>
+
+        <!-- Gráficos de Precios -->
+        <section class="price-charts mb-5">
+            <h2 class="text-center mb-4"><i class="fas fa-chart-line me-2"></i>Top Criptomonedas</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0"><img src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" width="30" class="me-2">Bitcoin (BTC)</h5>
+                            <span class="badge bg-success">+2.4%</span>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="btcChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repetir para ETH, BNB, etc -->
+            </div>
+        </section>
+
+        <!-- Videos Educativos -->
+        <section class="educational-videos">
+            <h2 class="text-center mb-4"><i class="fas fa-video me-2"></i>Aprende con Videos</h2>
+            <div class="row" id="video-container">
+                <div class="col-md-4 mb-4">
+                    <div class="card video-card h-100">
+                        <img src="https://i.ytimg.com/vi/vS3_72Gb-bI/mqdefault.jpg" class="card-img-top" alt="Qué es Bitcoin">
+                        <div class="card-body">
+                            <h5 class="card-title">Introducción a Bitcoin</h5>
+                            <button class="btn btn-primary btn-sm">Ver Video</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Más videos -->
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <p>Cripto-Eduar &copy; 2023 - Todos los derechos reservados</p>
+            <div class="social-icons">
+                <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
     <!-- Scripts -->
-    <script src="scripts/api-handler.js"></script>
-    <script src="scripts/charts-loader.js"></script>
-    <script src="scripts/app.js"></script>
+    <script src="assets/js/api-handler.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Inicialización básica de gráficos
+        document.addEventListener('DOMContentLoaded', function() {
+            // BTC Chart
+            const btcCtx = document.getElementById('btcChart').getContext('2d');
+            new Chart(btcCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Precio (USD)',
+                        data: [30000, 32000, 41000, 38500, 42000, 45000],
+                        borderColor: '#00ff88',
+                        tension: 0.4,
+                        fill: true,
+                        backgroundColor: 'rgba(0, 255, 136, 0.1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+            
+            // Cargar noticias (ejemplo)
+            setTimeout(() => {
+                document.querySelectorAll('.news-card.loading').forEach(card => {
+                    card.classList.remove('loading');
+                    card.innerHTML = `
+                        <h4>Título de Noticia Ejemplo</h4>
+                        <p>Descripción breve de la noticia sobre criptomonedas...</p>
+                        <span class="news-source">Fuente: Ejemplo.com</span>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-2">Leer más</a>
+                    `;
+                });
+            }, 1500);
+        });
+    </script>
 </body>
 </html>

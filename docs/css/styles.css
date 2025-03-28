@@ -5,12 +5,89 @@
     --text-light: #ffffff;
 }
 
+/* styles/main.css */
+:root {
+  --primary: #00ff88;
+  --dark: #121212;
+  --light: #f8f9fa;
+  --gray: #2a2a2a;
+}
+
+body {
+  background: var(--dark);
+  color: var(--light);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #003c3c 100%);
+  padding: 4rem 1rem;
+  text-align: center;
+  border-bottom: 3px solid var(--primary);
+}
+
+.news-section {
+  background: var(--gray);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.dropdown {
+  background: #252525;
+  border-left: 5px solid var(--primary);
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Agrega más estilos según necesites */
 body {
     background: var(--bg-dark);
     color: var(--text-light);
     font-family: 'Arial', sans-serif;
 }
 
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li a {
+    color: white;
+    padding: 5px 10px;
+}
 /* Dropdowns */
 .dropdown {
     margin: 1rem 0;
