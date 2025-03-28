@@ -1,0 +1,7 @@
+{
+    "cryptocurrencies": [
+        { "name": "Bitcoin", "price": 45000, "marketCap": "800B" },
+        { "name": "Ethereum", "price": 3000, "marketCap": "400B" },
+        { "name": "Cardano", "price": 1.5, "marketCap": "50B" }
+    ]
+}

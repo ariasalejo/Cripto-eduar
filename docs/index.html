@@ -1,75 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cripto Eduar</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Enlace para script general -->
-<script src="js/script.js" defer></script>
-
-<!-- Enlace para gráficos -->
-<script src="js/charts.js" defer></script>
+    <title>Cripto-Eduar | Educación Crypto</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Cripto Eduar</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li>
-                    <a href="#menu">Menú Principal</a>
-                    <ul class="dropdown">
-                        <li><a href="#que-son">¿Qué son las criptomonedas?</a></li>
-                        <li><a href="#aprende">¿Quieres aprender sobre...?</a>
-                            <ul class="dropdown">
-                                <li><a href="#defi">DeFi</a></li>
-                                <li><a href="#depin">DePin</a></li>
-                                <li><a href="#memecoin">Memecoin</a></li>
-                                <li><a href="#nfts">NFTs</a></li>
-                                <li><a href="#layer2">Layer 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#principales">Principales Criptomonedas</a></li>
-                        <li><a href="#videos">Videos Educativos</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+    <!-- Cabecera con README -->
+    <header class="hero">
+        <div class="readme-content">
+            <!-- Pega aquí el contenido de tu README.md -->
+            <h1>Bienvenido a Cripto-Eduar</h1>
+            <p>Tu guía definitiva para entender criptomonedas...</p>
+        </div>
     </header>
-    <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <div id="readme-content"></div>
-        </section>
-        <section id="que-son">
-            <h2>¿Qué son las criptomonedas?</h2>
-            <p>Las criptomonedas son monedas digitales o virtuales que utilizan tecnología criptográfica para garantizar la seguridad de las transacciones.</p>
-            <ul>
-                <li><strong>Descentralización:</strong> No dependen de bancos centrales.</li>
-                <li><strong>Seguridad:</strong> Utilizan tecnología blockchain.</li>
-                <li><strong>Transparencia:</strong> Todas las transacciones son públicas.</li>
-                <li><strong>Accesibilidad:</strong> Se pueden enviar y recibir globalmente.</li>
-            </ul>
-        </section>
-        <section id="aprende">
-            <h2>¿Quieres aprender sobre...?</h2>
-            <div id="tables-container"></div>
-        </section>
-        <section id="principales">
-            <h2>Principales Criptomonedas</h2>
-            <div id="crypto-prices"></div>
-        </section>
-        <section id="videos">
-            <h2>Videos Educativos</h2>
-            <div class="video-grid">
-                <!-- Videos embebidos -->
-            </div>
+       <!-- Sección de Noticias -->
+     <section class="news-section">
+    <h2>📰 Últimas Noticias Crypto</h2>
+    <div id="news-container" class="news-grid"></div>
+</section>
+    <!-- Menú Desplegable Principal -->
+    <main class="container">
+        <!-- Sección: ¿Qué son las criptomonedas? -->
+        <details class="dropdown" open>
+            <summary>📚 ¿Qué son las criptomonedas?</summary>
+            <p>Texto explicativo completo aquí...</p>
+        </details>
+
+        <!-- Sección: Quieres aprender de... -->
+        <details class="dropdown">
+            <summary>🚀 ¿Quieres aprender de...?</summary>
+            <details class="sub-dropdown">
+                <summary>DeFi</summary>
+                <div id="defi-table" class="coin-table"></div>
+            </details>
+            <!-- Repetir para Memecoin, DePin, NFTs, Layer 2 -->
+        </details>
+
+        <!-- Sección: Principales Criptomonedas -->
+        <details class="dropdown">
+            <summary>💎 Principales Criptomonedas</summary>
+            <details class="sub-dropdown">
+                <summary>Bitcoin (BTC)</summary>
+                <div class="coin-info">
+                    <p>Información detallada...</p>
+                    <canvas id="btc-chart"></canvas>
+                </div>
+            </details>
+            <!-- Repetir para Ethereum, BNB, Tether, Solana -->
+        </details>
+
+        <!-- Sección de Videos -->
+        <section class="videos-section">
+            <h2>🎥 Videos Educativos</h2>
+            <div class="video-grid" id="video-container"></div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Cripto Eduar</p>
-    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/api-handler.js"></script>
+    <script src="scripts/charts-loader.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
