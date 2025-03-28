@@ -1,10 +1,30 @@
-# For projects using Nanoc (http://nanoc.ws/)
+# Ignorar archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
 
-# Default location for output (needs to match output_dir's value found in nanoc.yaml)
-output/
+# Ignorar dependencias de Node.js
+node_modules/
 
-# Temporary file directory
-tmp/nanoc/
+# Ignorar archivos de construcción
+dist/
+build/
 
-# Crash Log
-crash.log
+# Ignorar archivos de configuración y logs
+*.log
+.env
+
+# Ignorar directorios temporales o de caché
+tmp/
+.cache/
+
+# Ignorar los archivos CSS y JavaScript generados automáticamente
+*.css.map
+*.js.map
+
+# Ignorar archivos específicos del editor
+.vscode/
+.idea/
+*.swp
+
+# Ignorar el archivo generado para Git
+.gitignore
